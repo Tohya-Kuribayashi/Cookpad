@@ -19,6 +19,7 @@ class SessionsController < ApplicationController
   end
   
   private
+  
   def log_in(user)
     session[:user_id] = user.id
   end
