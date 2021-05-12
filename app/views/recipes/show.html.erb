@@ -1,0 +1,22 @@
+<div class="recipe-show-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="recipe-show-single">
+          <h2 class="recipe-author">
+            <%= @recipe.user.name %>
+          </h2>
+          <p class="recipe-text">
+            <%= @recipe.title %>
+          </p>  
+          <%= image_tag @recipe.image.url %>
+          <p class="recipe-text">
+            <%= @recipe.description %>
+          </p>
+          <%= link_to '手順の追加', "#" , class: 'btn btn-block btn-black' %>
+          <%= link_to '材料の追加', "#" , class: 'btn btn-block btn-black' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
