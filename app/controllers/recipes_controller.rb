@@ -14,15 +14,11 @@ class RecipesController < ApplicationController
   def create
     @recipe = current_user.recipes.new(recipe_params)
     if @recipe.save
-      redirect_to @recipe, success: '作成に成功しました'
+      redirect_to @recipe, success: 'レシピを登録しました'
     else
-      flash.now[:danger] = "作成に失敗しました"
+      flash.now[:danger] = "レシピが登録できませんでした"
       render :new
     end
-  end
-
-  def update
-    @recipe = current_user.recipes
   end
   
   private
