@@ -5,4 +5,6 @@ class Step < ApplicationRecord
   validates :priority, presence: true
   
   belongs_to :recipe
+  
+  mount_uploader :image, ImageUploader
 end
