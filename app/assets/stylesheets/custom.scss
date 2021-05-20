@@ -158,7 +158,7 @@ h1, h2 {
     .recipe-title {
       padding-right: 20px;
       padding-left: 20px;
-      font-size: 25px;
+      font-size: 30px;
       font-weight: bolder;
     }
 
@@ -169,7 +169,14 @@ h1, h2 {
     
     .step-text {
       padding-right: 20px;
-      padding-left: 10px;
+      padding-left: 15px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    
+    .step-text-bold {
+      padding-right: 20px;
+      padding-left: 5px;
       font-size: 20px;
       font-weight: bold;
     }
@@ -205,8 +212,8 @@ h1, h2 {
     }
     
     .recipe-show-image {
-      width: 150px;
-      height: 100px;
+      width: 165px;
+      height: 110px;
     }
     
   }

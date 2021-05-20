@@ -13,11 +13,21 @@
             <%= @recipe.description %>
           </p>
           <%= image_tag @recipe.image.url %>
+          <p class="step-text">材料</p>
+          <div class="row">
+            <% @recipe.materials.each do |material| %>
+              <p class="step-description">
+                <%= material.title %>
+                <%= material.amount %>
+              </p>
+            <% end %>
+          </div>
+          <%= link_to '材料の追加', new_material_path(recipe_id: @recipe.id), class: 'btn btn-block btn-black' %>
           <p class="step-text">手順</p>
           <div class="row">
             <% @recipe.steps.each do |step| %>
               <div class="col-md-4">
-                <p class="step-text">
+                <p class="step-text-bold">
                   <%= step.priority %>
                 </p>
               <%= image_tag step.image.url, class: 'recipe-show-image' %>
@@ -27,8 +37,7 @@
              </div>
             <% end %>
           </div>
-          <%= link_to '手順の追加', new_step_path(recipe_id: @recipe.id) , class: 'btn btn-block btn-black' %>
-          <%= link_to '材料の追加', "#" , class: 'btn btn-block btn-black' %>
+          <%= link_to '手順の追加', new_recipe_step_path(@recipe) , class: 'btn btn-block btn-black' %>
         </div>
       </div>
     </div>

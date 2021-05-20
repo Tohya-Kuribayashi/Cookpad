@@ -1,7 +1,7 @@
 class StepsController < ApplicationController
   def new
     @step = Step.new
-    @recipe_id = params[:recipe_id]
+    @recipe = Recipe.find(params[:recipe_id])
   end
   
   def create

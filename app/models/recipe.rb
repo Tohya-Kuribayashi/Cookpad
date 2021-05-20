@@ -9,4 +9,7 @@ class Recipe < ApplicationRecord
   mount_uploader :image, ImageUploader
   
   has_many :steps
+  
+  has_many :recipe_materials
+  has_many :materials, :through => :recipe_materials
 end

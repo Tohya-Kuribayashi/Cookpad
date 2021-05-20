@@ -3,8 +3,8 @@
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <h1 class="text-center">手順を追加</h1>
-        <%= form_for @step do |f| %>
-          <%= f.hidden_field :recipe_id, value: @recipe_id %>
+        <%= form_for [@recipe, @step] do |f| %>
+          <%= f.hidden_field :recipe_id, value: @recipe.id %>
           <div class="form-group">
             <%= f.label :priority %>
             <%= f.text_field :priority %>
