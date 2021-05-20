@@ -6,22 +6,26 @@
           <h2 class="recipe-author">
             <%= @recipe.user.name %>
           </h2>
-          <p class="recipe-text">
+          <p class="recipe-title">
             <%= @recipe.title %>
-          </p>  
-          <%= image_tag @recipe.image.url %>
+          </p>
           <p class="recipe-text">
             <%= @recipe.description %>
           </p>
-          <% @recipe.steps.each do |step| %>
-            <p class="recipe-text">
-              <%= step.priority %>
-            </p>
-            <%= image_tag step.image.url %>
-            <p class="recipe-text">
-              <%= step.description %>
-            </p>
-          <% end %>
+          <%= image_tag @recipe.image.url %>
+          <p class="step-text">手順</p>
+          <div class="row">
+            <% @recipe.steps.each do |step| %>
+              <div class="col-md-4">
+                <p class="step-text">
+                  <%= step.priority %>
+                </p>
+              <%= image_tag step.image.url, class: 'recipe-show-image' %>
+              <p class="step-description">
+                <%= step.description %>
+              </p>
+             </div>
+            <% end %>
           </div>
           <%= link_to '手順の追加', new_step_path(recipe_id: @recipe.id) , class: 'btn btn-block btn-black' %>
           <%= link_to '材料の追加', "#" , class: 'btn btn-block btn-black' %>
