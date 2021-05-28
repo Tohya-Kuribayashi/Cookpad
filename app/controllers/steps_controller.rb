@@ -1,7 +1,7 @@
 class StepsController < ApplicationController
   def new
     @step = Step.new
-    @recipe_id = params[:recipe_id]
+    @recipe = Recipe.find(params[:recipe_id])
   end
   
   def create
@@ -13,6 +13,12 @@ class StepsController < ApplicationController
       flash.now[:danger] = "手順を追加できませんでした"
       render :new
     end
+  end
+  
+  def update
+  end
+  
+  def destory
   end
   
   private

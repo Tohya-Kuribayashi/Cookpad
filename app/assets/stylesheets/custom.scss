@@ -154,10 +154,36 @@ h1, h2 {
       padding-right: 20px;
       padding-left: 20px;
     }
+    
+    .recipe-title {
+      padding-right: 20px;
+      padding-left: 20px;
+      font-size: 30px;
+      font-weight: bolder;
+    }
 
     .recipe-text {
       padding-right: 20px;
       padding-left: 20px;
+    }
+    
+    .step-text {
+      padding-right: 20px;
+      padding-left: 15px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    
+    .step-text-bold {
+      padding-right: 20px;
+      padding-left: 5px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    
+    .step-description {
+      padding-right: 10px;
+      padding-left: 10px;
     }
 
     img {
@@ -184,5 +210,16 @@ h1, h2 {
         color: #565656;
       }
     }
+    
+    .recipe-show-image {
+      width: 165px;
+      height: 110px;
+    }
+    
+    .step-edit {
+      display: flex;
+      padding: 10px;
+    }
+    
   }
 }
