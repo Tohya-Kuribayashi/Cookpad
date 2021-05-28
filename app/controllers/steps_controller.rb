@@ -15,6 +15,12 @@ class StepsController < ApplicationController
     end
   end
   
+  def update
+  end
+  
+  def destory
+  end
+  
   private
   def recipe_params
     params.require(:step).permit(:recipe_id, :image, :description, :priority)

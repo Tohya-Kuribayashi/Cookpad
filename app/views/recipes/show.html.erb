@@ -34,6 +34,10 @@
               <p class="step-description">
                 <%= step.description %>
               </p>
+              <div class="step-edit">
+                <%= link_to '編集', "#", class: 'step-description' %>
+                <%= link_to '削除', "#", class: 'step-description' %>
+              </div>
              </div>
             <% end %>
           </div>

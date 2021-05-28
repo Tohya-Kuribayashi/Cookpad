@@ -4,7 +4,7 @@
       <div class="col-md-6 col-md-offset-3">
         <h1 class="text-center">材料を追加</h1>
         <%= form_for @material do |f| %>
-          <%= f.hidden_field :recipe_id, value: @material.recipe_id %>
+          <%= f.hidden_field :recipe_id, value: params[:recipe_id] %>
           <div class="form-group">
             <%= f.label :食材名 %>
             <%= f.text_field :title %>
