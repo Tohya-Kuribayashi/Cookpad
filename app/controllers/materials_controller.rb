@@ -5,8 +5,8 @@ class MaterialsController < ApplicationController
   
   def create
     @material = Material.new(recipe_params)
-    if @material.save&&Recipe_material.new(recipe_id: params[:recipe_id], material_id: @material.id).save
-      redirect_to @material.recipe, success: '材料を追加しました'
+    if @material.save && RecipeMaterial.new(recipe_id: params[:material][:recipe_id], material_id: @material.id).save
+      redirect_to Recipe.find(params[:material][:recipe_id]), success: '材料を追加しました'
     else
       flash.now[:danger] = "材料を追加できませんでした"
       render :new
